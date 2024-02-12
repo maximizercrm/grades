@@ -1,6 +1,7 @@
-# Грейды Skyeng
+# Engineering grading calculators
 
-В данном репозитрии представлены калькуляторы грейдов разработки и тестирования в Skyeng.
+The calculator and the grading system were originally created for @SkyEng by @dmkuznetsov. The original repository is [here](https://github.com/skyeng/grades).
 
-- [Калькулятор грейда разработчика (front, back, fullstack)](https://skyeng.github.io/grades/developers.html) 
-- [Калькулятор грейда QA](https://skyeng.github.io/grades/qa.html) 
+
+- [Developers grading V1 (en)](https://dmkuznetsov.github.io/grades/en.html?type=developers-v1)
+- [Developers grading V1 (ru)](https://dmkuznetsov.github.io/grades/ru.html?type=developers-v1)

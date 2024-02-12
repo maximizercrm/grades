@@ -1,0 +1,475 @@
+{
+  "position": "Developer",
+  "levels": [
+    {
+      "name": "Junior",
+      "score": 14,
+      "level": 1
+    },
+    {
+      "name": "Middle 1",
+      "score": 19,
+      "level": 2
+    },
+    {
+      "name": "Middle 2",
+      "score": 23,
+      "level": 2
+    },
+    {
+      "name": "Middle 3",
+      "score": 28,
+      "level": 2
+    },
+    {
+      "name": "Senior 1",
+      "score": 33,
+      "level": 3
+    },
+    {
+      "name": "Senior 2",
+      "score": 37,
+      "level": 3
+    },
+    {
+      "name": "Senior 3",
+      "score": 42,
+      "level": 3
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "subject": "What level of supervision is needed for an employee?",
+      "description": "Independently ensures the entire lifecycle of a task (from the moment the business brings a formulated problem to release) while adhering to deadlines. <br/> In Skyeng, the task lifecycle includes stages such as technical review (grooming), effort estimation, development, testing, deployment, verification, and metrics collection.",
+      "examples": "<b>Example:</b> The business states that the conversion to a study application has dropped, and suggests moving the form from the footer to the header of the page. The developer conducts a technical review, estimates the task, takes it into development, implements it, undergoes code review, testing, deploys the task into production, ensures everything works as needed, and together with the product manager can review the metrics. The higher the level of autonomy, the less need to involve the manager in the entire cycle.",
+      "choices": [
+        {
+          "choice": "Requires regular assistance and control",
+          "description": "On average every 1-2 days",
+          "value": 1
+        },
+        {
+          "choice": "Requires periodic control and assistance in key tasks",
+          "description": "Can be autonomous from 2 days to 2 weeks on average",
+          "value": 2
+        },
+        {
+          "choice": "Self-sufficient unit",
+          "description": "No control needed, consultations are possible. Independently takes the task, plans, and completes it within reasonable, expected deadlines",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 1,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 2,
+      "subject": "Ability to act in conditions of uncertainty",
+      "description": "When uncertainty arises in a task (regarding requirements, implementation, relationships, testing, analytics, etc.), the employee can independently resolve this uncertainty.",
+      "examples": "<b>Example 1:</b> In the process of task implementation, the employee discovers that layouts for the layout are missing. The developer, without involving the manager, negotiates with the product manager/designer about what to do with these pages.<br/><br/><b>Example 2:</b> When implementing a task, the employee finds that there are missing API methods from a service of a neighboring team, to which requests should be made. The developer goes and negotiates with the neighboring team that the missing method will appear soon (may agree to do it themselves and the team will review it, or may agree that the method will be implemented soon).",
+      "choices": [
+        {
+          "choice": "Seeks help from the manager and colleagues in conditions of uncertainty, asks questions",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Suggests options for solving the problem, can lead the situation out of uncertainty",
+          "description": "For example, after coordinating with more experienced colleagues or involving colleagues",
+          "value": 2
+        },
+        {
+          "choice": "Independently resolves the situation of uncertainty in a short time, eliminates blockers",
+          "description": "For example, through cross-team interaction, organizing meetings with stakeholders or knowledge keepers",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 2,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 3,
+      "subject": "Understanding the problem",
+      "description": "In any task, the employee understands the reason for its emergence. Knows what the solution to the task affects within the business and suggests improvements based on technical experience.",
+      "examples": "<b>Example:</b> Based on their experience, the developer may suggest automatically opening a modal window with an offer instead of repainting the registration button red to increase registration conversion.",
+      "choices": [
+        {
+          "choice": "Requires an explanation of the business value of the task being performed",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Knows what business problems the tasks they are performing solve and what value these tasks bring",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Conducts a business review of the task",
+          "description": "Challenges the business's proposals, highlights weak points, and suggests solution improvements or alternative ways to achieve the goal (if necessary)",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 3,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 4,
+      "subject": "Argumentation and confrontation",
+      "description": "Can confidently explain why this solution should not be implemented now, supporting their reasoning with facts and experience (both their own and others').",
+      "examples": "<b>Example:</b> The developer highlights to the business that the implementation of the task will take significantly more time than it will potentially bring benefits, or that the task is better solved now with a ready mechanism.",
+      "choices": [
+        {
+          "choice": "Performs tasks without entering into discussions about their goals",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Actively asks questions regarding the value and details of tasks and solutions",
+          "description": "Engages in dialogue with the customer/team (if necessary with the support of the manager), ready to voice contentious points and their doubts/proposals",
+          "value": 2
+        },
+        {
+          "choice": "Independently and convincingly proves to the customer/team their point of view, its connection with the business",
+          "description": "Ready for constructive dialogue",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 4,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 5,
+      "subject": "Strategic thinking",
+      "description": "The employee solves business tasks based on data analysis, considering the minimization of expenses and achieving the best result for the company in the future.",
+      "examples": "<b>Example:</b> The task is to implement and place a chat on the website page. An employee with strategic thinking will consider the scalability and reuse of the chat and initially plan its development with a slight increase in effort (which will lead to significant resource savings in the future).",
+      "choices": [
+        {
+          "choice": "Gaining experience in designing solutions",
+          "description": "Designs solutions with the participation of more experienced colleagues",
+          "value": 1
+        },
+        {
+          "choice": "Designs a solution that covers the current needs of the business",
+          "description": "Learns to see the full picture and anticipates potential requests, implementing solutions ready for reuse",
+          "value": 2
+        },
+        {
+          "choice": "Designs solutions that meet the goals of the business and are oriented towards long-term results",
+          "description": "Based on data analysis and with a slight increase in costs",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 5,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 6,
+      "subject": "Cross-team work",
+      "description": "The employee independently interacts with different teams, involving them in work to achieve project goals.",
+      "examples": "<b>Example:</b> When developing a chat for the main page of the website, the employee personally contacts the team of designers and analysts, negotiates the setting of tasks, and controls their execution.",
+      "choices": [
+        {
+          "choice": "Works within their own team",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Works within the team, participates in cross-team projects as a performer",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Effectively leads work on cross-team tasks",
+          "description": "",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 6,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 7,
+      "subject": "Responsibility for errors",
+      "description": "The employee's responsibility and initiative in case of problems.",
+      "examples": "<b>Example:</b> When errors occur in production, the developer proactively starts dealing with them, applying the necessary efforts to eliminate the problems. After solving the problem, a retrospective is conducted, and a solution is developed that will prevent similar problems in the future.",
+      "choices": [
+        {
+          "choice": "In case of critical errors in the service's operation, seeks help from colleagues/manager",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "In case of critical errors in the service's operation, engages and corrects without a request from the manager",
+          "description": "Investigates and corrects the problem.",
+          "value": 2
+        },
+        {
+          "choice": "In case of critical errors in the service's operation, engages and corrects without a request from the manager",
+          "description": "Independently analyzes errors and thinks about how not to repeat these errors in the future. Brings these solutions to execution",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 7,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 8,
+      "subject": "Performing (speed and volume of completed work)",
+      "description": "The employee effectively completes tasks considering speed, the number of tasks taken, and the quality of their completion.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Not lower or matches the speed and productivity of other Junior level guys",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Not lower or matches the speed and productivity of other Middle level guys",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Not lower or matches the speed and productivity of other Senior level guys",
+          "description": "",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 8,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 9,
+      "subject": "The number of task returns for rework after testing due to implementation errors",
+      "description": "The developer always checks the task before passing it to testing. This reduces the load on testers and also speeds up the task delivery (returning for rework usually entails an increase in delivery time).<br/>It should be noted that there can be \"technical returns\" of tasks, for example, due to the tester's infrastructure problems - such returns are not considered",
+      "examples": "<b>Example:</b> Testers rarely return tasks to the developer due to the presence of bugs. It is immediately clear to them how to test the task and what it affects.",
+      "choices": [
+        {
+          "choice": "Allows errors in no more than 50% of tasks",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Tests their work effectively, returned by the tester in no more than 30% of tasks",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Tests their work effectively, returned by the tester in no more than 10% of tasks",
+          "description": "The return of tasks occurs mainly due to errors in edge cases that are difficult to test",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 9,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 10,
+      "subject": "Service architecture",
+      "description": "At the start of a new project, the developer lays the architecture that allows for flexible response to business requests for a long time.<br/>When supporting an existing project, the architecture is gradually improved through regular tasks.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Strictly follows the conventions adopted in the project",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Successfully designs architecture independently at the level of individual tasks in the project",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Successfully designs architecture independently for individual services and major tasks in existing projects",
+          "description": "Focuses on long-term support and expandability of functionality",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 10,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 11,
+      "subject": "Service operability control",
+      "description": "The developer effectively builds a system for controlling the operability of the products being developed.<br/>Can answer the question \"is it functioning now?\" without visiting the service.",
+      "examples": "<b>Example:</b> The developer sets up alerting for technical and product metrics that will inform him if something goes wrong.",
+      "choices": [
+        {
+          "choice": "Checks the service's operability manually",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Sets up technical monitoring, alerting for controlling the current operability of the service",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Identifies technical, product, and business metrics",
+          "description": "Sets up monitoring and alerting for them to control the current operability",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 11,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 12,
+      "subject": "Technical review",
+      "description": "Technical review is an effective way of designing a technical solution. The better the design, the fewer problems with maintaining that task in the future.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Participates as a member. Suggests improvements",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Conducts technical review independently for tasks in the project",
+          "description": "The results of the technical review do not get sent for rework in most cases",
+          "value": 2
+        },
+        {
+          "choice": "Conducts technical review for any size tasks/projects, with any degree of uncertainty",
+          "description": "The results of the technical review do not get reworked in most cases. Can challenge someone else's solution and defend their own",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 12,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 13,
+      "subject": "Code review",
+      "description": "The quality of Code Review allows identifying errors at an earlier stage, synchronizing the team in terms of writing code, and adopting best practices.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Predominantly reviewed and observer",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Reviews themselves and receives reviews from others",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Reviews themselves and receives reviews from others",
+          "description": "During the review process, corrects architectural decisions and highlights problems with the current implementation (rather than code style)",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 13,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 14,
+      "subject": "Hard skills - knowledge of the current stack",
+      "description": "In SkyEng, there is a description of the technical stack and the expectations of what engineers should know.",
+      "choices": [
+        {
+          "choice": "Knows the theory, lacks practice",
+          "description": "",
+          "value": 1
+        },
+        {
+          "choice": "Knows the theory, confident in practice",
+          "description": "",
+          "value": 2
+        },
+        {
+          "choice": "Excellent knowledge of theory, deeply understands technologies",
+          "description": "",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 14,
+      "isActive": true,
+      "isKeyQuestion": true
+    }
+  ]
+}

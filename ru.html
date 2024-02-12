@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Developers grading</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<div id="app" class="container py-4 mt-4">
+    <header class="pb-1 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">🚀 Калькулятор грейда разработчиков SkyEng</span>
+        </a>
+    </header>
+    <div class="p-2 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-1 collapse-horizontal">
+            <h1 class="display-5 fw-bold pb-3">О системе грейдов</h1>
+            <div>
+                <div class="col-md-8 fs-6">
+                    Гредирование - это система, позволяющая привязать зарплаты в компании к результатам сотрудников,
+                    а так же построить индивидуальный план развития каждого разработчика через систему оценки.
+                </div>
+                <div class="col-md-8 fs-6">
+                    Система грейдов для разработчиков состоит из 2-х частей и включает:
+                    <ul>
+                        <li>Оценку performance по критериям. Формат: самооценка + оценка руководителя. Коллеги и эксперты могут быть привлечены по запросу</li>
+                        <li>Оценку хардов. Формат: самооценка + экспертная оценка</li>
+                    </ul>
+                </div>
+                <div class="col-md-8 fs-6 mt-4">
+                    Вопросы, помеченные в оценке <b>*</b> являются ключевыми. Если проявление по ключевому вопросу соответствует уровню middle, то
+                    в случае набора по баллам уровня senior, будет присвоена оценка, не выше middle.
+                </div>
+                <div class="col-md-8 fs-6 mt-4">
+                    С учетом того, что оценка достаточно субъективна, выбирайте варианты проявления, которые чаще всего были за последние 3 месяца.
+                    Если сомневаетесь между двумя, выбирайте нижнее проявление.
+                </div>
+            </div>
+            <a href="#questions" class="btn btn-primary btn-lg mt-5" type="button" @click.prevent="start" v-show="!started">Начать
+                оценку по критериям</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container" id="questions" v-show="started">
+            <div v-for="question in questions" v-bind:id="question.id">
+                <div class="question ml-sm-5 pl-sm-5 pb-2" v-show="show(question.number)">
+                    <figure>
+                        <blockquote class="blockquote pt-4">
+                            <h5>{{ question.number }}/{{ questionsCount }}. {{ question.subject }}<span
+                                    v-if="question.isKeyQuestion">*</span></h5>
+                        </blockquote>
+                        <figcaption class="blockquote-footer" v-show="question.description" v-html="question.description">
+                        </figcaption>
+                        <small v-if="question.examples"><div class="card card-body" v-html="question.examples"></div></small>
+                    </figure>
+                    <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3 options-container">
+                        <div class="form-check py-1" v-for="choice in question.choices" v-bind:id="choice.value">
+                            <input class="form-check-input" type="radio" :name="'question_' + question.id"
+                                   :id="'question_' + question.id + '_' + choice.value"
+                                   @change="answer(question.id, choice.value)">
+                            <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">
+                                {{ choice.choice }}
+                            </label>
+                            <div id="emailHelp" class="form-text" v-if="choice.description">{{
+                                    choice.description
+                                }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5" v-show="lastAnsweredNumber === questionsCount">
+                <h4>Грейд, с учетом ключевых <b>*</b> пунктов: {{ realGrade.name }}</h4>
+
+                <div style="margin-top: 20px">
+                    <span>Набрано баллов: {{ userScore }} / {{ maxScore }}</span>
+                    <ul>
+                        <li v-for="gradeStep in grades">{{ gradeStep.name }} >= {{ gradeStep.score }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+        Создано во время работы в SkyEng &copy; 2024
+    </footer>
+</div>
+
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    fetch(`grades/${type}.ru.json`)
+        .then(response => response.json())
+        .then(data => {
+            new Vue({
+                el: '#app',
+                data: {
+                    test: data.quiz,
+                    grades: data.levels,
+                    result: [],
+                    lastAnsweredNumber: 0,
+                    started: false
+                },
+                computed: {
+                    questions: function () {
+                        let ordered = _.orderBy(_.filter(this.test, 'isActive'), ['position']);
+                        let result = [];
+                        let number = 1;
+                        ordered.forEach(item => {
+                            item.number = number++;
+                            result.push(item);
+                        });
+                        return result;
+                    },
+                    maxScore() {
+                        return _.filter(this.test, 'isActive').length * 3;
+                    },
+                    userScore() {
+                        let score = 0;
+                        this.result.forEach(item => {
+                            score += item.value;
+                        });
+                        return score;
+                    },
+                    questionsCount() {
+                        return _.filter(this.test, 'isActive').length;
+                    },
+                    estimatedGrade: function () {
+                        return this.calculateGrade(this.grades, this.userScore, 3);
+                    },
+                    realGrade: function () {
+                        let maxLevel = 3;
+                        this.result.forEach(item => {
+                            if (this.getById(item.id).isKeyQuestion && item.value < maxLevel) {
+                                maxLevel = item.value;
+                            }
+                        });
+                        let result = this.calculateGrade(this.grades, this.userScore, maxLevel);
+                        if (!result) {
+                            result = _.orderBy(this.grades, ['score'], ['asc'])[0];
+                        }
+                        return result;
+                    }
+                },
+                methods: {
+                    answer: function (questionId, value) {
+                        const answer = _.find(this.result, {id: questionId});
+                        if (!answer) {
+                            this.result.push({
+                                id: questionId,
+                                value: value
+                            });
+                        } else {
+                            answer.value = value;
+                        }
+                        const question = _.find(this.test, {id: questionId});
+                        if (question.number > this.lastAnsweredNumber) {
+                            this.lastAnsweredNumber = question.number;
+                        }
+                    },
+                    calculateGrade: function (grades, userScore, levelLimit) {
+                        let found = false,
+                            tmpGrades = [];
+                        grades.forEach(grade => {
+                            if (grade.score <= userScore && grade.level <= levelLimit) {
+                                tmpGrades.push(grade);
+                                if (!found) {
+                                    found = true;
+                                }
+                            }
+                        })
+                        if (!found) {
+                            return _.orderBy(grades, ['score'], ['asc'])[0];
+                        } else {
+                            return _.orderBy(tmpGrades, ['score'], ['desc'])[0];
+                        }
+                    },
+                    getById: function (questionId) {
+                        return _.find(this.test, {id: questionId});
+                    },
+                    getFirstId: function () {
+                        return this.result[0] || null;
+                    },
+                    show: function (questionNumber) {
+                        return questionNumber === 1 || this.lastAnsweredNumber >= questionNumber - 1;
+                    },
+                    start: function () {
+                        this.started = true;
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
