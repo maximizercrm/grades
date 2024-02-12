@@ -73,7 +73,7 @@
       "id": 2,
       "subject": "Ability to act in conditions of uncertainty",
       "description": "When uncertainty arises in a task (regarding requirements, implementation, relationships, testing, analytics, etc.), the employee can independently resolve this uncertainty.",
-      "examples": "<b>Example 1:</b> In the process of task implementation, the employee discovers that layouts for the layout are missing. The developer, without involving the manager, negotiates with the product manager/designer about what to do with these pages.<br/><br/><b>Example 2:</b> When implementing a task, the employee finds that there are missing API methods from a service of a neighboring team, to which requests should be made. The developer goes and negotiates with the neighboring team that the missing method will appear soon (may agree to do it themselves and the team will review it, or may agree that the method will be implemented soon).",
+      "examples": "<b>Example 1:</b> In the process of task implementation, the employee discovers that a logo for the layout is missing. The developer, without involving the manager, negotiates with the product manager/designer about what to do with these pages.<br/><br/><b>Example 2:</b> When implementing a task, the employee finds that there are missing API methods from a service of a neighboring team, to which requests should be made. The developer goes and negotiates with the neighboring team that the missing method will appear soon (may agree to do it themselves and the team will review it, or may agree that the method will be implemented soon).",
       "choices": [
         {
           "choice": "Seeks help from the manager and colleagues in conditions of uncertainty, asks questions",
@@ -262,17 +262,17 @@
       "examples": "",
       "choices": [
         {
-          "choice": "Not lower or matches the speed and productivity of other Junior level guys",
+          "choice": "Not lower or matches the speed and productivity of other Junior level developers",
           "description": "",
           "value": 1
         },
         {
-          "choice": "Not lower or matches the speed and productivity of other Middle level guys",
+          "choice": "Not lower or matches the speed and productivity of other Middle level developers",
           "description": "",
           "value": 2
         },
         {
-          "choice": "Not lower or matches the speed and productivity of other Senior level guys",
+          "choice": "Not lower or matches the speed and productivity of other Senior level developers",
           "description": "",
           "value": 3
         },
@@ -350,7 +350,7 @@
     },
     {
       "id": 11,
-      "subject": "Service operability control",
+      "subject": "Checking the service's operability",
       "description": "The developer effectively builds a system for controlling the operability of the products being developed.<br/>Can answer the question \"is it functioning now?\" without visiting the service.",
       "examples": "<b>Example:</b> The developer sets up alerting for technical and product metrics that will inform him if something goes wrong.",
       "choices": [
