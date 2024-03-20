@@ -28,7 +28,7 @@
                     The grade system for developers consists of 2 parts and includes:
                     <ul>
                         <li>Performance evaluation based on criteria. Format: self-assessment + manager's assessment. Colleagues and experts may be involved upon request</li>
-                        <li>Hard skills evaluation. Format: self-assessment + expert assessment</li>
+                        <li>Hard skills evaluation (optional).</li>
                     </ul>
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
@@ -62,13 +62,8 @@
                             <input class="form-check-input" type="radio" :name="'question_' + question.id"
                                    :id="'question_' + question.id + '_' + choice.value"
                                    @change="answer(question.id, choice.value)">
-                            <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">
-                                {{ choice.choice }}
-                            </label>
-                            <div id="emailHelp" class="form-text" v-if="choice.description">{{
-                                    choice.description
-                                }}
-                            </div>
+                            <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">{{ choice.choice }}</label>
+                            <div id="emailHelp" class="form-text" v-if="choice.description">{{ choice.description }}</div>
                         </div>
                     </div>
                 </div>

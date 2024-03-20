@@ -1,0 +1,450 @@
+{
+  "position": "Developer",
+  "levels": [
+    {
+      "name": "Junior",
+      "score": 13,
+      "level": 1
+    },
+    {
+      "name": "Middle 1",
+      "score": 17,
+      "level": 2
+    },
+    {
+      "name": "Middle 2",
+      "score": 20,
+      "level": 2
+    },
+    {
+      "name": "Middle 3",
+      "score": 23,
+      "level": 2
+    },
+    {
+      "name": "Middle 4",
+      "score": 26,
+      "level": 2
+    },
+    {
+      "name": "Senior 1",
+      "score": 30,
+      "level": 3
+    },
+    {
+      "name": "Senior 2",
+      "score": 34,
+      "level": 3
+    },
+    {
+      "name": "Senior 3",
+      "score": 38,
+      "level": 3
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "subject": "Level of supervision",
+      "description": "This metric helps distinguish between varying degrees of autonomy and independence among engineers, from those who require frequent direction to those who thrive on self-sufficiency. It reflects an individual's progression in confidence, skill, and the ability to contribute to projects with minimal external input. This criteria is essential for understanding how engineers fit within teams, their potential for leadership, and their capacity for managing tasks or projects.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Requires regular supervision and guidance to complete tasks (on average every 1-3 days).",
+          "description": "This level is characterized by the need for ongoing support to understand and execute assignments effectively.",
+          "value": 1
+        },
+        {
+          "choice": "Requires occasional oversight and targeted assistance for complex tasks (on average every 3-14 days).",
+          "description": "At this level, the engineer demonstrates the ability to handle routine tasks independently but may need support for more challenging projects.",
+          "value": 2
+        },
+        {
+          "choice": "Operates as a self-reliant professional, demonstrating autonomy in task completion and decision-making.",
+          "description": "This level indicates a high degree of proficiency, requiring minimal to no supervision and possessing the capability to guide others.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 1,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 2,
+      "subject": "Ability to act in conditions of uncertainty",
+      "description": "This criteria assess an engineer's proficiency in handling situations where information is incomplete, outcomes are unpredictable, and clear paths are not immediately evident. It measures the individual's capability to navigate ambiguity, make informed decisions, and take action despite uncertainties. This ability is crucial in fast-paced or rapidly changing environments where adaptability and resilience are key. The criteria differentiate between engineers based on their reliance on guidance, their problem-solving initiative, and their capacity for independent action under uncertain circumstances.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Actively seeks guidance from managers and colleagues when faced with uncertainty.",
+          "description": "This level is characterized by a reliance on the knowledge and experience of others to navigate unfamiliar challenges.",
+          "value": 1
+        },
+        {
+          "choice": "Analyzes situations of uncertainty and proposes potential solutions.",
+          "description": "At this level, the engineer demonstrates initiative and a capacity to contribute to problem-solving, potentially leading efforts to overcome.",
+          "value": 2
+        },
+        {
+          "choice": "Demonstrates a strong level of independence and the ability to make quick decisions to resolve uncertain situations.",
+          "description": "This level signifies a high degree of autonomy, problem-solving ability, and the competence to address and resolve challenges promptly and effectively.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 2,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 3,
+      "subject": "Performing (speed and volume of completed work)",
+      "description": "This criteria assess an engineer's efficiency and productivity in delivering tasks and projects. This metric measures how quickly and effectively an engineer completes their assigned work, considering both the pace at which tasks are finished and the amount of work accomplished within a given timeframe. It's an essential indicator of an individual's capability to manage their workload, prioritize tasks, and maintain high levels of performance under varying pressures and deadlines. By evaluating an engineer's speed and volume of completed work, organizations can gauge productivity levels, identify areas for improvement, and understand how well team members are meeting project demands.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Not lower or matches the speed and productivity of other Junior level engineers.",
+          "description": "\n",
+          "value": 1
+        },
+        {
+          "choice": "Not lower or matches the speed and productivity of other Intermediate level engineers.",
+          "description": "\n",
+          "value": 2
+        },
+        {
+          "choice": "Not lower or matches the speed and productivity of other Senior level engineers.",
+          "description": "\n",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 3,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 4,
+      "subject": "Hard skills - knowledge of the current stack",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Has a foundational understanding of theoretical concepts but lacks practical experience.",
+          "description": "This level indicates familiarity with the principles but limited application in real-world projects.",
+          "value": 1
+        },
+        {
+          "choice": "Demonstrates proficiency in applying knowledge practically. ",
+          "description": "At this level, the engineer is capable of confidently utilizing the technology stack in day-to-day tasks without frequent assistance.",
+          "value": 2
+        },
+        {
+          "choice": "Possesses advanced theoretical knowledge and deep practical understanding of the technology stack.",
+          "description": "This level reflects an ability to not only apply technologies effectively but also to innovate and optimize their usage in complex scenarios.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 4,
+      "isActive": true,
+      "isKeyQuestion": true
+    },
+    {
+      "id": 5,
+      "subject": "Understanding the problem",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Needs clarification on the task's business impact and its purpose.",
+          "description": "This level is characterized by seeking explanations to understand how their work contributes to the organization's objectives.",
+          "value": 1
+        },
+        {
+          "choice": "Understands the business challenges addressed by their tasks and the value their contributions bring.",
+          "description": "At this level, the engineer has a clear grasp of how their work fits into broader business goals.",
+          "value": 2
+        },
+        {
+          "choice": "Critically evaluates business strategies, identifying potential weaknesses and proposing enhancements or alternative approaches to achieve objectives more effectively.",
+          "description": "This level reflects a proactive stance in contributing to business innovation and optimization.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 5,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 6,
+      "subject": "Team collaboration",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Collaborates effectively within their immediate team. ",
+          "description": "This level is characterized by engaging in team tasks and contributing to the team's goals through assigned roles.",
+          "value": 1
+        },
+        {
+          "choice": "Actively participates in both team and cross-team projects, contributing as a reliable member.",
+          "description": "At this level, the engineer demonstrates the ability to work beyond their immediate team, effectively collaborating on broader organizational projects.",
+          "value": 2
+        },
+        {
+          "choice": "Proactively works with cross-team tasks. Agrees with other team members about time/quality expectations.",
+          "description": "This level indicates a high degree of collaboration and leadership, ensuring projects meet or exceed organizational standards through effective communication and coordination across teams.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 6,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 7,
+      "subject": "Responsibility for major errors",
+      "description": "This ability is crucial in dynamic environments where decisions must often be made with incomplete data. It evaluates how engineers identify, analyze, and address ambiguous challenges, highlighting their problem-solving skills, independence, and resilience. The criteria distinguish between those who require guidance, those who contribute to problem-solving, and those who lead in resolving uncertainties.",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Seeks help from colleagues OR corrects major errors with a request from the team.",
+          "description": "This level is characterized by a proactive approach to seeking advice and clarification, demonstrating a willingness to learn and rely on the collective knowledge of the team to navigate uncertain situations.",
+          "value": 1
+        },
+        {
+          "choice": "Engages and corrects major errors without a request from the team.",
+          "description": "At this level, the individual not only identifies challenges but also engages in critical thinking to offer viable solutions. This demonstrates an evolving confidence in handling uncertainty and a readiness to take on more responsibility in problem-solving processes.",
+          "value": 2
+        },
+        {
+          "choice": "Takes a proactive role in cross-team initiatives, negotiating timeframes and quality expectations with stakeholders.",
+          "description": "This level signifies a high degree of self-reliance and decisiveness. The individual possesses the skills and confidence to independently assess situations, identify blockers, and implement solutions swiftly, effectively minimizing the impact of uncertainty on project progress.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 7,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 8,
+      "subject": "% implemented tasks with bugs found by QA",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "More than 40% of tasks implemented contain bugs identified by QA.",
+          "description": "This level indicates a higher occurrence of errors in delivered tasks, suggesting areas for improvement in coding standards and testing.",
+          "value": 1
+        },
+        {
+          "choice": "Between 20% and 40% of implemented tasks have bugs found by QA.",
+          "description": "This level shows a moderate rate of error in work, reflecting developing proficiency in creating more reliable and cleaner code.",
+          "value": 2
+        },
+        {
+          "choice": "Less than 20% of tasks implemented have bugs identified by QA.",
+          "description": "This level demonstrates a high standard of work with a low incidence of errors, indicating strong coding practices and thorough testing before submission.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 8,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 9,
+      "subject": "Understanding of the product usage",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": " Lacks awareness of how users engage with the functionality they have implemented.",
+          "description": "This level indicates a gap in understanding user interactions and the impact of their work on the user experience.",
+          "value": 1
+        },
+        {
+          "choice": "Utilizes third-party tools like Google Analytics, Pendo, and New Relic to gain insights into how users are interacting with the product.",
+          "description": "At this level, the engineer begins to engage with user data to inform their understanding of product usage.",
+          "value": 2
+        },
+        {
+          "choice": "Proactively gathers both technical and product metrics, creating comprehensive dashboards to analyze user behavior and identify potential issues or areas for improvement.",
+          "description": "This level demonstrates a deep commitment to understanding the user experience, using data-driven insights to guide future developments and optimize the product.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 9,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 10,
+      "subject": "Service's operability",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Monitors the service's operability through manual checks when requested.",
+          "description": "This level reflects a basic approach to ensuring service functionality, relying on direct observation and ad-hoc verification processes.",
+          "value": 1
+        },
+        {
+          "choice": "Implements logging and consults these logs as well as third-party tools such as New Relic or Application Insights when necessary.",
+          "description": "At this level, the engineer has a more systematic approach to monitoring, utilizing tools to aid in the detection and analysis of service issues upon request.",
+          "value": 2
+        },
+        {
+          "choice": "Proactively adds logs and leverages both technical and product metrics to gain insights into the service's performance.",
+          "description": "This level indicates a comprehensive, proactive strategy for ensuring and enhancing service operability.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 10,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 11,
+      "subject": "Code review",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Primarily engages in code reviews as an observer, receiving feedback and guidance on their work.",
+          "description": "This level is characterized by learning from the review process, understanding best practices, and gradually increasing their contribution to code quality.",
+          "value": 1
+        },
+        {
+          "choice": "Actively participates in code reviews, both reviewing others' code and having their own code reviewed.",
+          "description": "This level demonstrates a reciprocal approach to learning and contributing to the improvement of code quality within the team.",
+          "value": 2
+        },
+        {
+          "choice": "Plays a critical role in code review by evaluating and correcting architectural decisions, identifying potential product issues, and suggesting improvements.",
+          "description": "This level reflects a deep understanding of the codebase and the ability to foresee and mitigate future problems, thereby enhancing the product's overall quality and integrity.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 11,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 12,
+      "subject": "Technical debt",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Requires guidance from the team/manager to identify and address technical debt.",
+          "description": " This level indicates a reliance on leadership to prioritize and strategize the handling of legacy issues within the codebase.",
+          "value": 1
+        },
+        {
+          "choice": "Collaborates with the team/manager to plan and tackle technical debt as part of their regular workflow.",
+          "description": "At this level, the engineer recognizes the importance of managing technical debt and actively seeks to integrate its resolution within their tasks, with mutual agreement on priorities.",
+          "value": 2
+        },
+        {
+          "choice": "Proactively enhances the service architecture and mitigates technical debt in tandem with product developments, ensuring minimal disruption to development timelines.",
+          "description": "This level demonstrates an advanced capability to balance new feature development with the ongoing improvement of the codebase, leading to more sustainable and efficient project outcomes.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 12,
+      "isActive": true,
+      "isKeyQuestion": false
+    },
+    {
+      "id": 13,
+      "subject": "Knowledge sharing",
+      "description": "",
+      "examples": "",
+      "choices": [
+        {
+          "choice": "Responds to inquiries regarding implemented functionality and creates documentation when prompted by team members",
+          "description": "This level indicates a reactive approach to knowledge sharing, primarily responding to direct requests for information.",
+          "value": 1
+        },
+        {
+          "choice": "Proactively creates documentation following the implementation of new features or updates, without needing explicit requests from others.",
+          "description": "At this level, the engineer recognizes the value of documentation in facilitating team understanding and efficiency.",
+          "value": 2
+        },
+        {
+          "choice": "Actively creates, maintains, and improves documentation, ensuring that it is comprehensive and accessible.",
+          "description": "This level demonstrates a commitment to enabling the team to find answers independently within a reasonable timeframe, significantly contributing to the team's overall knowledge base and efficiency.",
+          "value": 3
+        },
+        {
+          "choice": "Does not know / does not do / cannot answer",
+          "description": "",
+          "value": 0
+        }
+      ],
+      "position": 13,
+      "isActive": true,
+      "isKeyQuestion": false
+    }
+  ]
+}
