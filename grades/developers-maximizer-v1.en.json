@@ -46,7 +46,7 @@
     {
       "id": 1,
       "subject": "Level of supervision",
-      "description": "This metric helps distinguish between varying degrees of autonomy and independence among engineers, from those who require frequent direction to those who thrive on self-sufficiency. It reflects an individual's progression in confidence, skill, and the ability to contribute to projects with minimal external input. This criteria is essential for understanding how engineers fit within teams, their potential for leadership, and their capacity for managing tasks or projects.",
+      "description": "",
       "examples": "",
       "choices": [
         {
@@ -55,7 +55,7 @@
           "value": 1
         },
         {
-          "choice": "Requires occasional oversight and targeted assistance for complex tasks (on average every 3-14 days).",
+          "choice": "Requires occasional oversight and targeted assistance for complex tasks.",
           "description": "At this level, the engineer demonstrates the ability to handle routine tasks independently but may need support for more challenging projects.",
           "value": 2
         },
@@ -77,7 +77,7 @@
     {
       "id": 2,
       "subject": "Ability to act in conditions of uncertainty",
-      "description": "This criteria assess an engineer's proficiency in handling situations where information is incomplete, outcomes are unpredictable, and clear paths are not immediately evident. It measures the individual's capability to navigate ambiguity, make informed decisions, and take action despite uncertainties. This ability is crucial in fast-paced or rapidly changing environments where adaptability and resilience are key. The criteria differentiate between engineers based on their reliance on guidance, their problem-solving initiative, and their capacity for independent action under uncertain circumstances.",
+      "description": "",
       "examples": "",
       "choices": [
         {
@@ -108,7 +108,7 @@
     {
       "id": 3,
       "subject": "Performing (speed and volume of completed work)",
-      "description": "This criteria assess an engineer's efficiency and productivity in delivering tasks and projects. This metric measures how quickly and effectively an engineer completes their assigned work, considering both the pace at which tasks are finished and the amount of work accomplished within a given timeframe. It's an essential indicator of an individual's capability to manage their workload, prioritize tasks, and maintain high levels of performance under varying pressures and deadlines. By evaluating an engineer's speed and volume of completed work, organizations can gauge productivity levels, identify areas for improvement, and understand how well team members are meeting project demands.",
+      "description": "",
       "examples": "",
       "choices": [
         {
@@ -143,18 +143,18 @@
       "examples": "",
       "choices": [
         {
-          "choice": "Has a foundational understanding of theoretical concepts but lacks practical experience.",
-          "description": "This level indicates familiarity with the principles but limited application in real-world projects.",
+          "choice": "Possesses a theoretical understanding and limited practical experience, primarily from academic or personal projects.",
+          "description": "This level indicates basic knowledge with minimal application in professional settings.",
           "value": 1
         },
         {
-          "choice": "Demonstrates proficiency in applying knowledge practically. ",
-          "description": "At this level, the engineer is capable of confidently utilizing the technology stack in day-to-day tasks without frequent assistance.",
+          "choice": "Has professional experience, mainly with small to medium-sized projects.",
+          "description": "This level showcases the ability to apply technical skills in a commercial environment, demonstrating a solid foundation in practical applications.",
           "value": 2
         },
         {
-          "choice": "Possesses advanced theoretical knowledge and deep practical understanding of the technology stack.",
-          "description": "This level reflects an ability to not only apply technologies effectively but also to innovate and optimize their usage in complex scenarios.",
+          "choice": "Features extensive experience and a wide-ranging skill set across various technologies, evidenced by a history of resolving intricate issues and successfully managing large-scale projects.",
+          "description": "This level indicates a deep understanding and mastery of the technological landscape, showcasing an aptitude for innovation and complex problem-solving.",
           "value": 3
         },
         {
@@ -232,22 +232,22 @@
     {
       "id": 7,
       "subject": "Responsibility for major errors",
-      "description": "This ability is crucial in dynamic environments where decisions must often be made with incomplete data. It evaluates how engineers identify, analyze, and address ambiguous challenges, highlighting their problem-solving skills, independence, and resilience. The criteria distinguish between those who require guidance, those who contribute to problem-solving, and those who lead in resolving uncertainties.",
+      "description": "",
       "examples": "",
       "choices": [
         {
-          "choice": "Seeks help from colleagues OR corrects major errors with a request from the team.",
-          "description": "This level is characterized by a proactive approach to seeking advice and clarification, demonstrating a willingness to learn and rely on the collective knowledge of the team to navigate uncertain situations.",
+          "choice": "Seeks assistance from colleagues or addresses significant errors following a directive from the team.",
+          "description": "This level indicates a reliance on external guidance to manage and rectify critical issues.",
           "value": 1
         },
         {
-          "choice": "Engages and corrects major errors without a request from the team.",
-          "description": "At this level, the individual not only identifies challenges but also engages in critical thinking to offer viable solutions. This demonstrates an evolving confidence in handling uncertainty and a readiness to take on more responsibility in problem-solving processes.",
+          "choice": "Proactively identifies and remedies major errors independently, without needing explicit instructions from the team.",
+          "description": "At this level, the engineer takes initiative in resolving problems, demonstrating a commitment to maintaining service quality.",
           "value": 2
         },
         {
-          "choice": "Takes a proactive role in cross-team initiatives, negotiating timeframes and quality expectations with stakeholders.",
-          "description": "This level signifies a high degree of self-reliance and decisiveness. The individual possesses the skills and confidence to independently assess situations, identify blockers, and implement solutions swiftly, effectively minimizing the impact of uncertainty on project progress.",
+          "choice": "Takes immediate action on critical service errors without waiting for direction from management. This engineer conducts thorough analyses to understand the root causes of issues, devises strategies to prevent recurrence, and leads the implementation of solutions.",
+          "description": "This level reflects a high degree of responsibility and foresight, ensuring the long-term reliability and improvement of the service.",
           "value": 3
         },
         {
