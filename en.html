@@ -8,6 +8,23 @@
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="//cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .textarea {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            resize: both;
+            min-height: 60px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .textarea[contenteditable]:empty::before {
+            content: "Provide examples here..";
+            color: #cccccc;
+        }
+    </style>
 </head>
 <body>
 <div id="app" class="container py-4 mt-4">
@@ -35,7 +52,7 @@
                     in case of scoring at the senior level, the assessment will not be higher than middle.
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
-                    Given that the assessment is quite subjective, choose manifestations that have occurred most often over the last 3 months.
+                    Given that the assessment is quite subjective, choose manifestations that have occurred most often over the last 3-6 months.
                     If in doubt between two, choose the lower manifestation.
                 </div>
             </div>
@@ -64,6 +81,9 @@
                             <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">{{ choice.choice }}</label>
                             <div id="emailHelp" class="form-text" v-if="choice.description">{{ choice.description }}</div>
                         </div>
+                    </div>
+                    <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3 mt-3">
+                        <span class="textarea" role="textbox" contenteditable></span>
                     </div>
                 </div>
             </div>
