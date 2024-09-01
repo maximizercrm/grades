@@ -1,6 +1,6 @@
 # Engineering grading calculators
 
-The calculator and the grading system were originally created for @SkyEng by @dmkuznetsov. The original repository is [here](https://github.com/skyeng/grades).
+The calculator and the grading system were originally created for @SkyEng by @deeravenger. The original repository is [here](https://github.com/skyeng/grades).
 
 
 - [SkyEng developers grading V1 (en)](https://deeravenger.github.io/grades/en.html?type=skyeng-developers-v1)
