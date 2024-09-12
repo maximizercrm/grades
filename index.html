@@ -1,47 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Developers grading</title>
+    <title>Grading calculator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="//cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .textarea {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            resize: both;
+            min-height: 60px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .textarea[contenteditable]:empty::before {
+            content: "Provide at least 2 examples here";
+            color: #cccccc;
+        }
+    </style>
 </head>
 <body>
 <div id="app" class="container py-4 mt-4">
     <header class="pb-1 mb-4 border-bottom">
         <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4">🚀 Калькулятор грейда разработчиков SkyEng</span>
+            <span class="fs-4">🚀 Grading calculator</span>
         </a>
     </header>
     <div class="p-2 mb-4 bg-light rounded-3">
         <div class="container-fluid py-1 collapse-horizontal">
-            <h1 class="display-5 fw-bold pb-3">О системе грейдов</h1>
+            <h1 class="display-5 fw-bold pb-3">About the grading</h1>
             <div>
                 <div class="col-md-8 fs-6">
-                    Гредирование - это система, позволяющая привязать зарплаты в компании к результатам сотрудников,
-                    а так же построить индивидуальный план развития каждого разработчика через систему оценки.
+                    Grading is a system that allows simplifies building an individual development plan for a developer through an evaluation system.
                 </div>
                 <div class="col-md-8 fs-6">
-                    Система грейдов для разработчиков состоит из 2-х частей и включает:
+                    The grade system for developers consists of 2 parts and includes:
                     <ul>
-                        <li>Оценку performance по критериям. Формат: самооценка + оценка руководителя. Коллеги и эксперты могут быть привлечены по запросу</li>
-                        <li>Оценку хардов. Формат: самооценка + экспертная оценка</li>
+                        <li>Performance evaluation based on criteria. Format 240: self-assessment + colleagues assessment + manager's assessment. Additional roles could be involved upon request</li>
+                        <li>Hard skills evaluation (not included).</li>
                     </ul>
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
-                    Вопросы, помеченные в оценке <b>*</b> являются ключевыми. Если проявление по ключевому вопросу соответствует уровню middle, то
-                    в случае набора по баллам уровня senior, будет присвоена оценка, не выше middle.
+                    Questions marked with a <b>*</b> are key. If the performance on a key issue matches the middle level, then
+                    in case of scoring at the senior level, the assessment will not be higher than middle.
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
-                    С учетом того, что оценка достаточно субъективна, выбирайте варианты проявления, которые чаще всего были за последние 3 месяца.
-                    Если сомневаетесь между двумя, выбирайте нижнее проявление.
+                    Given that the assessment is quite subjective, choose manifestations that have occurred most often over the last 3-6 months.
+                    If in doubt between two, choose the lower manifestation.
                 </div>
             </div>
-            <a href="#questions" class="btn btn-primary btn-lg mt-5" type="button" @click.prevent="start" v-show="!started">Начать
-                оценку по критериям</a>
+            <a href="#questions" class="btn btn-primary btn-lg mt-5" type="button" @click.prevent="start" v-show="!started">Start evaluation</a>
         </div>
     </div>
 
@@ -63,23 +78,21 @@
                             <input class="form-check-input" type="radio" :name="'question_' + question.id"
                                    :id="'question_' + question.id + '_' + choice.value"
                                    @change="answer(question.id, choice.value)">
-                            <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">
-                                {{ choice.choice }}
-                            </label>
-                            <div id="emailHelp" class="form-text" v-if="choice.description">{{
-                                    choice.description
-                                }}
-                            </div>
+                            <label class="form-check-label" :for="'question_' + question.id + '_' + choice.value">{{ choice.choice }}</label>
+                            <div id="emailHelp" class="form-text" v-if="choice.description">{{ choice.description }}</div>
                         </div>
+                    </div>
+                    <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3 mt-3">
+                        <span class="textarea" role="textbox" contenteditable></span>
                     </div>
                 </div>
             </div>
 
             <div class="mt-5" v-show="lastAnsweredNumber === questionsCount">
-                <h4>Грейд, с учетом ключевых <b>*</b> пунктов: {{ realGrade.name }}</h4>
+                <h4>Grade, taking into account key <b>*</b> items: {{ realGrade.name }}</h4>
 
                 <div style="margin-top: 20px">
-                    <span>Набрано баллов: {{ userScore }} / {{ maxScore }}</span>
+                    <span>Points scored: {{ userScore }} / {{ maxScore }}</span>
                     <ul>
                         <li v-for="gradeStep in grades">{{ gradeStep.name }} >= {{ gradeStep.score }}</li>
                     </ul>
@@ -89,7 +102,7 @@
     </div>
 
     <footer class="pt-3 mt-4 text-muted border-top">
-        Создано во время работы в SkyEng &copy; 2024
+        &nbsp;
     </footer>
 </div>
 
@@ -97,7 +110,7 @@
 <script>
     const params = new URLSearchParams(window.location.search);
     const type = params.get('type');
-    fetch(`grades/${type}.ru.json`)
+    fetch(`grades/${type}.json`)
         .then(response => response.json())
         .then(data => {
             new Vue({
