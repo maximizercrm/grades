@@ -35,28 +35,22 @@
     </header>
     <div class="p-2 mb-4 bg-light rounded-3">
         <div class="container-fluid py-1 collapse-horizontal">
-            <h1 class="display-5 fw-bold pb-3">About the grading</h1>
+            <h1 class="display-5 fw-bold pb-3">About the Grading Calculator</h1>
             <div>
                 <div class="col-md-8 fs-6">
-                    Grading is a system that allows simplifies building an individual development plan for a developer through an evaluation system.
+                    The grading calculator streamlines the creation of individual development plans for developers by offering a thorough evaluation system. Used company-wide, it helps identify team skill gaps and promotes transparency and fairness.
                 </div>
                 <div class="col-md-8 fs-6">
-                    The grade system for developers consists of 2 parts and includes:
-                    <ul>
-                        <li>Performance evaluation based on criteria. Format 240: self-assessment + colleagues assessment + manager's assessment. Additional roles could be involved upon request</li>
-                        <li>Hard skills evaluation (not included).</li>
-                    </ul>
+                    We rely on this calculator as the cornerstone of our performance and growth discussions, which occur several times a year to track progress and provide feedback. Each year, we perform a 360-degree assessment, including self, peer, and manager evaluations. While results may vary due to different factors, this tool is mainly a starting point for our discussions.
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
-                    Questions marked with a <b>*</b> are key. If the performance on a key issue matches the middle level, then
-                    in case of scoring at the senior level, the assessment will not be higher than middle.
+                    Key questions are marked with <b>*</b>. If performance on a key issue is at the mid-level, an overall assessment cannot exceed the mid-level, even with senior-level scores elsewhere.
                 </div>
                 <div class="col-md-8 fs-6 mt-4">
-                    Given that the assessment is quite subjective, choose manifestations that have occurred most often over the last 3-6 months.
-                    If in doubt between two, choose the lower manifestation.
+                    When using the calculator and unsure between two options, choose the lower level.
                 </div>
             </div>
-            <a href="#questions" class="btn btn-primary btn-lg mt-5" type="button" @click.prevent="start" v-show="!started">Start evaluation</a>
+            <a href="#questions" class="btn btn-primary btn-lg mt-5" type="button" @click.prevent="start" v-show="!started">Start</a>
         </div>
     </div>
 
